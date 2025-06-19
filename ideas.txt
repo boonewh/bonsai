@@ -1,0 +1,65 @@
+Core Developer Appeal Features
+Environment Detection & Config
+php// config.php - auto-detects environment
+$config = [
+    'dev' => $_SERVER['HTTP_HOST'] === 'localhost',
+    'cdn_prefix' => $dev ? '' : 'https://cdn.example.com',
+    'analytics_id' => $dev ? '' : 'GA-XXXXX'
+];
+Better Asset Management
+
+Auto-minification toggle for CSS/JS in static builds
+Image optimization during static generation
+Asset versioning/cache busting
+
+Developer Experience Improvements
+
+Basic CLI commands: php bonsai serve (dev server), php bonsai build (static)
+Live reload in dev mode (simple WebSocket)
+Better error pages with stack traces in dev
+
+Content & SEO Features
+Markdown Support (huge developer appeal)
+php// pages/blog/my-post.md gets auto-converted
+$use_layout = true;
+$title = "My Post";
+// --- 
+# My Post Content
+This is markdown!
+Automatic SEO Generation
+
+Sitemap.xml creation during static build
+Open Graph meta tags helper
+JSON-LD structured data helpers
+
+Simple Data Handling
+php// data/products.json or data/team.yaml
+// Auto-accessible in templates as $data['products']
+Modern Development Features
+Component System (staying simple)
+php// components/card.php
+function card($title, $content, $link = '') {
+    return "<div class='card'>...</div>";
+}
+
+// Use: <?= card("Title", "Content") ?>
+Form Handling
+
+Simple contact form processor
+Basic validation helpers
+Email sending (for shared hosting)
+
+Plugin/Hook System (very lightweight)
+php// hooks for before_render, after_build, etc.
+add_hook('before_static_build', function() {
+    // Optimize images, etc.
+});
+What Would Make Developers Choose This Over Alternatives?
+
+"WordPress Killer" positioning - "All the simplicity of static sites with the familiarity of PHP"
+Hybrid deployment story - "Develop locally with PHP, deploy anywhere as static HTML"
+Client handoff story - "Give clients a simple PHP site they can edit, or a static site they can't break"
+Performance story - Built-in lighthouse scoring, automatic optimization
+
+The key is keeping your core use case intact while adding layers that make it appealing to different developer types. Each feature should be optional and non-breaking.
+Most impactful addition: Markdown support + better static build tooling. That alone would get you attention from the Jamstack crowd.
