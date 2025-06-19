@@ -2,9 +2,11 @@
 
 A simple step-by-step guide for beginner developers building a website with the Bonsai PHP Site Maker.
 
-Call it a micro-framework, a starter kit, or just a simple structure — Bonsai was created to solve a real-world problem I encountered: building clean, modern websites for clients who insist on keeping control of their own domain and host everything on shared hosting platforms.
+Call it a micro-framework (I don't), a starter kit (this is what I prefer), or just a simple structure — Bonsai was created to solve a real-world problem I encountered: building clean, modern websites for clients who insist on keeping control of their own domain and host everything on shared hosting platforms.
 
 It’s intentionally lightweight, easy to understand, and works out of the box without needing a build process, database, or special server. Whether you call it a framework or not, Bonsai is here to make small-site development faster, simpler, and more maintainable — without giving up modern tooling like Tailwind CSS and Alpine.js. 
+
+I've just started this and plan on making it more than you see. 
 
 **NOTE:** There is a base assumption that the shared hosting you use will be run by Apache, thus an .htaccess file is included as part of the setup.
 
@@ -313,6 +315,9 @@ This will:
 ---
 
 ## Part 8: Going Live (Shared Hosting Option)
+
+##This option is why the original Site Maker was created. 
+I needed a simple option for hosting custom code on a shared hosting site. Not my choice, done for a customer. PHP just works, but I wanted better routing options, so I started with a simple .htaccess file and some custom routing. Then the build bug hit me and Bonsai was born.
 
 - Use FTP tools (e.g., FileZilla) or cPanel File Manager  
 - Make sure `.htaccess` is included (for dynamic routing)  

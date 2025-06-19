@@ -36,6 +36,13 @@ function wrap_alert($content, $type = 'info') {
 }
 
 function wrap($content, $mode = '') {
+    // Auto-detect if content looks like markdown output
+    $is_markdown = (strpos($content, '<h1>') !== false || strpos($content, '<h2>') !== false || strpos($content, '<p>') !== false);
+    
+    if ($is_markdown) {
+        $content = "<div class='prose prose-lg max-w-none'>{$content}</div>";
+    }
+    
     switch ($mode) {
         case 'card':
             return wrap_card($content);
