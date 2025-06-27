@@ -1,0 +1,74 @@
+# Bonsai Framework .gitignore
+
+# Build output - static site generation
+/dist/
+/build/
+
+# Cache and temporary files
+*.cache
+*.tmp
+*.log
+.cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Environment and config files (if you add them later)
+.env
+.env.local
+.env.production
+.env.staging
+config/local.php
+config/production.php
+
+# PHP specific
+*.php~
+.phpunit.result.cache
+vendor/
+
+# Backup files
+*.backup
+*.bak
+*-backup/
+*-old/
+
+# User uploads (if you add file upload functionality)
+uploads/
+user-content/
+
+# Development/testing files
+test-output/
+debug.log
+error.log
+
+# Node.js (in case you add any build tools later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sass/CSS compilation (if you add preprocessing)
+*.css.map
+.sass-cache/
+
+# Misc
+*.zip
+*.tar.gz
+*.rar

@@ -1,0 +1,1 @@
+<div class='bg-white shadow p-6 rounded-lg'><?= $content ?></div>
